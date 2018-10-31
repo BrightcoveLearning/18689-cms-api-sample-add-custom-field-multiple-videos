@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>CMS API Sample: Add Custom Fields to Multiple Videos</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/source-code-pro" type="text/css"/>
+  
+  <link rel='stylesheet' href='https://learning-services-media.brightcove.com/doc-assets/js/rome/rome.min.css'>
+
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+
+  <section class="bcls-section" id="workingSample">
+  <h2>Add Custom Field to Videos</h2>
+
+  <fieldset class="bcls-fieldset">
+    <legend>Input</legend>
+
+    <p>If you do not enter account information, a Brightcove sample account will be used.</p>
+
+    <p>Account id: <input id="account_id" type="text" value="" placeholder="1752604059001" /></p>
+
+    <p>Client id: <input id="client_id" type="text" size="60" value="" placeholder="c5d0a622-5479-46d8-8d8a-5f034b943fab" /></p>
+
+    <p>Client secret: <input id="client_secret" type="text" size="60" value="" placeholder="w7NQYu0vUloM4GYYy2SXAxrvyFpt8fwI35qAFZcS13" /></p>
+
+    <p><button id="switch_accounts" class="bcls-button">Switch Accounts</button></p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>
+            Video List <br>
+            <button id="get_videos" class="bcls-button">Get Videos</button>
+          </th>
+          <th>Custom Fields</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td id="video_list"></td>
+          <td>
+            <p>Fields: <select id="custom_fields"></select></p>
+            <p>Field value: <input id="custom_field_value" type="text" style="display:inline;" /> <select id="custom_field_values"></select></p>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <p>After selecting videos and custom field/value: <button id="update_videos" class="bcls-button">Add Custom Fields</button></p>
+  </fieldset>
+
+  <fieldset class="bcls-fieldset">
+    <legend>Log</legend>
+
+    <div id="logger" style="color:rgb(237, 104, 38)">Waiting for input</div>
+    <p>Current API request</p>
+
+    <pre class="line-numbers">
+<code id="api_request" class="language-http">API requests will appear here...</code></pre>
+
+    <p>Current API response</p>
+
+    <pre class="line-numbers">
+<code id="api_response" class="language-json">API resonses will appear here...</code></pre>
+  </fieldset>
+</section>
+  <script src='https://learning-services-media.brightcove.com/doc-assets/js/rome/rome.min.js'></script>
+
+  
+
+    <script  src="js/index.js"></script>
+
+
+
+
+</body>
+
+</html>
